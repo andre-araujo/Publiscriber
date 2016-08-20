@@ -3,14 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title>Publiscriber sample</title>
-        <link rel="stylesheet" href="/main.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="./main.css" media="screen" charset="utf-8">
     </head>
     <body>
-        <p>
-            test
-        </p>
-        <input type="button" name="name" value="" onclick="function() { console.log('test') }">
+        <div>
+            <h1 class="title">Pub/Sub exemple.</h1>
 
-        <script type="text/javascript" src="../dist/publiscriber.min.js"></script>
+            <span id="counter" class="counter">
+                0
+            </span>
+
+            <div class="btn-container">
+                <button id="publish" class="btn" value="1">Add</button>
+                <button id="subscribe" class="btn">subscribe</button>
+                <button id="unsubscribe" class="btn">unsubscribe</button>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./../dist/publiscriber.min.js"></script>
+        <script type="text/javascript" src="./main.js"></script>
     </body>
 </html>

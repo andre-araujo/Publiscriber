@@ -4,11 +4,13 @@
   "description": "",
   "main": "./dist/publiscriber.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "watch \"npm run build\" ./dev",
+    "build": "uglifyjs ./dev/*.js -o ./dist/publiscriber.min.js -c -m"
   },
   "author": "André L S Araújo",
   "license": "ISC",
   "devDependencies": {
-    "uglify-js": "^2.7.3"
+    "uglify-js": "^2.7.3",
+    "watch": "^0.19.2"
   }
 }
