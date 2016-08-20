@@ -1,3 +1,3 @@
-##publiscriber
+##Publiscriber
 
-A simple and pub/sub lib.
+A simple pub/sub lib.
