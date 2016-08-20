@@ -1,0 +1,14 @@
+{
+  "name": "publiscriber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/publiscriber.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "André L S Araújo",
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^2.7.3"
+  }
+}
