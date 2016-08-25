@@ -1,16 +1,22 @@
 var publiscriber = (function() {
-    var subcriptions = [];
+
+    return {
+        on: on,
+        emit: emit,
+        off: off,
+        subcriptions: []
+    };
 
     function on (eventName, callback) {
-        off (eventName);
-        subcriptions.push({
+        off.call (this, eventName);
+        this.subcriptions.push({
             eventName: eventName,
             callback: callback
         });
     }
 
     function emit (eventName, data) {
-        subcriptions.forEach(function(subcription) {
+        this.subcriptions.forEach(function(subcription) {
             if (subcription.eventName === eventName) {
                 subcription.callback(data);
             }
@@ -18,9 +24,11 @@ var publiscriber = (function() {
     }
 
     function off (eventName, callback) {
-        subcriptions.forEach(function(subcription, index) {
+        var that = this;
+
+        this.subcriptions.forEach(function(subcription, index) {
             if (subcription.eventName === eventName) {
-                subcriptions.splice(index, 1);
+                that.subcriptions.splice(index, 1);
             }
         });
 
@@ -29,9 +37,4 @@ var publiscriber = (function() {
         }
     }
 
-    return {
-        on: on,
-        emit: emit,
-        off: off
-    }
 })();

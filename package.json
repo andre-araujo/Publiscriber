@@ -4,12 +4,20 @@
   "description": "",
   "main": "./dist/publiscriber.min.js",
   "scripts": {
-      "start": "watch \"npm run build\" ./dev",
+    "start": "watch \"npm run build\" ./dev",
+    "test": "karma start",
+    "testconfig": "karma init karma.conf.js",
     "build": "uglifyjs ./dev/*.js -o ./dist/publiscriber.min.js -c -m"
   },
   "author": "André L S Araújo",
   "license": "ISC",
   "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
     "uglify-js": "^2.7.3",
     "watch": "^0.19.2"
   }
